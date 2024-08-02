@@ -32,7 +32,7 @@ async function getIngredients(url: string): Promise<Recipe> {
 
     recipe.image = $('.universal-image__image').data('src') as string;
 
-    $('.mntl-structured-ingredients__list-item').each(
+    $('.mm-recipes-structured-ingredients__list-item').each(
       (i: number, el: cheerio.Element) => {
         recipe.ingredients.push($(el).text().trim());
       }
